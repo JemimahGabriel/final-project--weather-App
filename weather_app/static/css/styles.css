@@ -1,0 +1,150 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body as Flex container */
+body {
+    display: flex;                  /* Set body to be a Flex container */
+    justify-content: center;        /* Center the items horizontally */
+    align-items: center;            /* Center the items vertically */
+    min-height: 100vh;              /* Ensure the body takes full height of the viewport */
+    background-image: url('background-image.jpg'); /* Add your background image */
+    background-size: cover;        /* Cover the entire viewport */
+    background-position: center;   /* Center the background */
+    flex-direction: column;         /* Stack items vertically */
+    color: white;                    /* Dark color for text */
+    text-align: center;
+}
+
+/* Container for the entire body content */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;               /* Limit max-width */
+    height: 100%;                   /* Fill entire height of the screen */
+    padding: 20px;
+    background: rgba(112, 187, 222, 0.8); /* Optional: semi-transparent background */
+    border-radius: 10px;
+}
+
+/* Form container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;                      /* Add space between the form and response */
+    width: 100%;
+    max-width: 600px;               /* Limit the width of the form */
+    padding: 20px;
+    background: rgb(218, 145, 8); 
+    box-shadow: #dae0d6;/* Optional: semi-transparent background */
+    border-radius: 10px;
+}
+
+
+h1 {
+    margin-bottom: 20px;
+    color: #164cb8; 
+    margin-top: 30px;                   /* Dark color for header */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;              /* Limit input width */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+    color: #333;                   /* Dark text inside the input */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Response container */
+.response-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Optional: semi-transparent background */
+    border-radius: 10px;
+    width:100%;
+    max-width: 600px;               /* Limit the width of the response container */
+    text-align: center;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #333;                    /* Dark color for the sub-heading */
+}
+
+p {
+    margin-top: 10px;
+    color: #333; 
+    text-align: center;                   /* Dark color for paragraph text */
+}
+
+/* Error message styling */
+.error-message {
+    margin-top: 20px;
+    color: red;
+    font-weight: bold;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For smaller screens (e.g., mobile devices) */
+@media (max-width: 600px) {
+    /* Adjust the form container */
+    .form-container {
+        max-width: 100%;             /* Full width for mobile */
+        padding: 10px;
+    }
+
+    /* Adjust the response container */
+    .response-container {
+        max-width: 100%;             /* Full width for mobile */
+        padding: 10px;
+    }
+
+    input[type="text"], button {
+        max-width: 90%;              /* Allow input fields to take most of the screen width */
+    }
+
+    h1 {
+        font-size: 24px;             /* Smaller heading on mobile */
+    }
+
+    h2 {
+        font-size: 20px;             /* Smaller sub-heading on mobile */
+    }
+}
